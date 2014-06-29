@@ -10,7 +10,7 @@ public:
 	MainMenu();
 	~MainMenu();
 	
-	void HandleEvents();
+	int HandleEvents();
 	void DoLogic();
 	void RenderGraphics();
 };

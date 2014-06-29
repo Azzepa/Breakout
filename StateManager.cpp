@@ -40,12 +40,22 @@ void StateManager::ChangeState()
 	}
 }
 
-State* StateManager::GetCurrentState()
-{
-	return currentState;
-}
-
 int StateManager::GetCurrentStateID()
 {
 	return stateID;
+}
+
+void StateManager::HandleEvents()
+{
+	SetNextState(currentState->HandleEvents());
+}
+
+void StateManager::DoLogic()
+{
+	currentState->DoLogic();
+}
+
+void StateManager::RenderGraphics()
+{
+	currentState->RenderGraphics();
 }

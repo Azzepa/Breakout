@@ -2,10 +2,6 @@
 #ifndef STATEMANAGER_H
 #define STATEMANAGER_H
 
-#include "State.h"
-#include "MainMenu.h"
-#include "Globals.h"
-
 class StateManager
 {
 private:
@@ -20,8 +16,11 @@ public:
 
 	void SetNextState(const int &newStateID);
 	void ChangeState();
-	State* GetCurrentState();
 	int GetCurrentStateID();
+	
+	void HandleEvents();
+	void DoLogic();
+	void RenderGraphics();
 };
 
 #endif

@@ -8,6 +8,7 @@
 
 #include "Globals.h"
 
+#include "SoundManager.h"
 #include "ImageManager.h"
 
 #include "State.h"

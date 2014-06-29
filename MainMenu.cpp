@@ -10,8 +10,16 @@ MainMenu::~MainMenu()
 {
 }
 
-void MainMenu::HandleEvents()
+int MainMenu::HandleEvents()
 {	
+	int returnState = STATE_NONE;
+	SDL_Event event;
+	while (SDL_PollEvent(&event))
+	{
+		if (event.type == SDL_QUIT)
+			returnState = STATE_EXIT;
+	}
+	return returnState;
 }
 
 void MainMenu::DoLogic()

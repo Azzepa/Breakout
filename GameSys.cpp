@@ -61,10 +61,10 @@ int GameSys::Run()
 	stateManager->ChangeState();
 	while (stateManager->GetCurrentStateID() != STATE_EXIT)
 	{
-		stateManager->GetCurrentState()->HandleEvents();
-		stateManager->GetCurrentState()->DoLogic();
+		stateManager->HandleEvents();
+		stateManager->DoLogic();
 		stateManager->ChangeState();
-		stateManager->GetCurrentState()->RenderGraphics();
+		stateManager->RenderGraphics();
 	}
 	
 	Cleanup();

@@ -7,7 +7,7 @@ class State
 public:
 	virtual ~State(){};
 	
-	virtual void HandleEvents() = 0;
+	virtual int HandleEvents() = 0;
 	virtual void DoLogic() = 0;
 	virtual void RenderGraphics() = 0;
 };
