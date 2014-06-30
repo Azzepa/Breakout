@@ -27,5 +27,9 @@ void MainMenu::DoLogic()
 }
 
 void MainMenu::RenderGraphics()
-{	
+{
+	SDL_SetRenderDrawColor(gameSys->GetRenderer(), 0, 0, 0, 255);
+	SDL_RenderClear(gameSys->GetRenderer());
+	
+	SDL_RenderPresent(gameSys->GetRenderer());
 }

@@ -14,8 +14,16 @@ GameSys* GameSys::GetInstance()
 
 GameSys::GameSys()
 {
-	//Startup
-	isRunning = true;
+}
+
+SDL_Window* GameSys::GetWindow()
+{
+	return window;
+}
+
+SDL_Renderer* GameSys::GetRenderer()
+{
+	return renderer;
 }
 
 bool GameSys::Initialise()

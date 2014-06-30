@@ -8,8 +8,6 @@ private:
 	SDL_Window* window;
 	SDL_Renderer* renderer;
 
-	bool isRunning;
-
 	GameSys();
 	
 	bool Initialise();
@@ -17,6 +15,9 @@ private:
 public:
 	static GameSys* instance;
 	static GameSys* GetInstance();
+
+	SDL_Window* GetWindow();
+	SDL_Renderer* GetRenderer();
 
 	int Run();
 };
